@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ProfileController : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public List<GameObject> menus;
+    //public List<GameObject> activeMenus;
+    public Canvas canvas;
+
+    public AudioSource audioSource;
+    public AudioClip profileOpenClip;
+    public AudioClip profileCloseClip;
+    private void Start()
+    {
+        audioSource = GameObject.Find("MenusSoundSource").GetComponent<AudioSource>();
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && canvas.gameObject.GetComponent<Canvas>().enabled == true)
+        {
+            audioSource.PlayOneShot(profileCloseClip);
+            canvas.gameObject.GetComponent<Canvas>().enabled = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (canvas.gameObject.GetComponent<Canvas>().enabled == true)
+            {
+                audioSource.PlayOneShot(profileCloseClip);
+                canvas.gameObject.GetComponent<Canvas>().enabled = false;
+
+            }
+            else
+            {
+                audioSource.PlayOneShot(profileOpenClip);
+                canvas.gameObject.GetComponent<Canvas>().enabled = true;
+            }
+        }
+    }
+}
