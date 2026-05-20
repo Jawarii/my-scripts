@@ -2,7 +2,7 @@
 
 Welcome to the standalone script repository for **Void Lands**. 
 
-This repository was created specifically to provide potential employers, recruiters, and technical reviewers with fast,frictionless access to the game's core architecture and codebase without requiring them to download gigabytes of heavy art assets, audio files, or engine binaries.
+This repository was created specifically to provide potential employers, recruiters, and technical reviewers with fast, frictionless access to the game's core architecture and codebase without requiring them to download gigabytes of heavy art assets, audio files, or engine binaries.
 
 ---
 
